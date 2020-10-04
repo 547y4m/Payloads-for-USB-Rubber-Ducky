@@ -3,6 +3,7 @@
 //Replace <I.p_address> with i.p address e.g. 192.X.X.X
 //Replace <shell_name> with shell name you gave while creating listener e.g. shell.exe
 
+<==============remove_the_above_comments==============================>
 
 DELAY 2000
 GUI r
