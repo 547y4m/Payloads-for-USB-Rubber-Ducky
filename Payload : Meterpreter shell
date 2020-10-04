@@ -1,7 +1,8 @@
-/*You can adjust the time delay according to victim machine response*/
-/*Increase the delay if victim machine is slow & vice-versa*/
-//Replace <I.p_address> with i.p address e.g. 192.X.X.X
-//Replace <shell_name> with shell name you gave while creating listener e.g. shell.exe
+/* You can adjust the time delay according to victim machine response */
+/* Increase the delay if victim machine is slow & vice-versa */
+/* Replace <I.p_address> with i.p address e.g. 192.X.X.X */
+/* Replace <shell_name> with shell name you gave while creating listener e.g. shell.exe */
+/* It is assumed that attacker and victim system is connected on same network */
 
 <==============remove_the_above_comments==============================>
 
